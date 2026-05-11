@@ -1,0 +1,6 @@
+{
+  "name": "Hindtech HRMS",
+  "description": "A production-quality temporary HRMS Attendance Management Web App using Next.js and Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
