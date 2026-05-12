@@ -35,8 +35,8 @@ export default function ReportsPage() {
       if (!res.ok) throw new Error()
       const data = await res.json()
       setReportData(data)
-    } catch {
-      toast.error("Failed to fetch report")
+    } catch (err: any) {
+      toast.error("Failed to fetch report: " + err.message)
     } finally {
       setIsLoading(false)
     }

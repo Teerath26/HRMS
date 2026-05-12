@@ -6,6 +6,7 @@ export async function GET() {
     const employees = await db.getEmployees();
     return NextResponse.json(employees);
   } catch (error) {
+    console.error("GET /api/employees error:", error);
     return NextResponse.json({ error: "Failed to fetch employees" }, { status: 500 });
   }
 }

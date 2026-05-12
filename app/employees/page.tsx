@@ -42,8 +42,8 @@ export default function EmployeesPage() {
       if (!res.ok) throw new Error("Failed to fetch")
       const data = await res.json()
       setEmployees(data)
-    } catch {
-      toast.error("Error loading employees")
+    } catch (err: any) {
+      toast.error("Error loading employees: " + err.message)
     } finally {
       setIsLoading(false)
     }

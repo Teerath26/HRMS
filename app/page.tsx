@@ -49,8 +49,8 @@ export default function Dashboard() {
           leave,
           monthlyAttendance: total > 0 ? Math.round((present / total) * 100) : 0
         })
-      } catch (error) {
-        toast.error("Failed to load dashboard statistics.")
+      } catch (error: any) {
+        toast.error("Failed to load dashboard statistics: " + error.message)
       }
     }
     loadStats()

@@ -48,8 +48,8 @@ export default function AttendancePage() {
       })
       setAttendance(newAtt)
       setSelectedEmps(new Set())
-    } catch {
-      toast.error("Failed to load attendance data")
+    } catch (err: any) {
+      toast.error("Failed to load attendance data: " + err.message)
     }
   }
 
